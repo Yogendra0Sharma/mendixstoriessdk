@@ -18,7 +18,7 @@
     "test:watch": "cross-env NODE_TLS_REJECT_UNAUTHORIZED=0 mocha --watch test/ --growl --reporter=spec --timeout=0",
     "start-dev": "cross-env NODE_TLS_REJECT_UNAUTHORIZED=0 cross-env concurrently --raw \"npm run build:watch\" \"npm run test:watch\" ",
     "dev": "npm run build && cross-env NODE_TLS_REJECT_UNAUTHORIZED=0 concurrently --raw \"npm run build:watch\" \"npm run test:watch\" ",
-    "doc": "compodoc -p tsconfig.json --output docs --name \"@yogendra0sharma/mendix-nodejs-sdk\" --theme material && cp -r images/ docs/ ",
+    "doc": "compodoc -p tsconfig.json --output docs --name \"mendix stories sdk\" --theme material && cp -r images/ docs/ ",
     "tsc-publish-dry": "tsc-publish --no-checks --dry-run"
   },
   "repository": {
