@@ -13,14 +13,14 @@ describe("[SDK] StoriesClient", () => {
     });
 
     after(async () => {
-        console.log("Finish Stories Client Tests....")
+        console.log("Finish Stories Client Tests....");
     });
     const timeOffset = new Date().getTime();
     const testInput = {
         SprintID: 1111,
         StoryID: 2222,
         TaskID: 3333
-    }
+    };
 
     it("storiesClient should not be undefined or null", async () => {
         storiesClient.should.not.be.undefined;
@@ -73,7 +73,6 @@ describe("[SDK] StoriesClient", () => {
             }) as model.CreateStoryRequest);
             story.should.not.be.undefined;
             story.should.not.be.null;
-            //(story as model.CreateStoryResponse).NewStoryID.should.be.a('number');
             testInput.StoryID = story.NewStoryID;
         });
 
@@ -106,7 +105,7 @@ describe("[SDK] StoriesClient", () => {
                 Points: model.StoryPoints._3,
                 Status: model.BacklogState.Started,
                 StoryID: testInput.StoryID
-            }
+            };
             storiesClient.should.not.be.undefined;
             const newStory = await storiesClient.updateStory(createRequestPayload(baseRequest, storyInput) as model.UpdateStoryRequest);
             newStory.should.not.be.undefined;
@@ -156,7 +155,7 @@ describe("[SDK] StoriesClient", () => {
                 Name: "testTask_" + timeOffset,
                 ParentStoryID: testInput.StoryID,
                 TaskID: testInput.TaskID
-            }
+            };
             storiesClient.should.not.be.undefined;
             const newTask = await storiesClient.updateTask(createRequestPayload(baseRequest, taskInput) as model.UpdateTaskRequest);
             newTask.should.not.be.undefined;
