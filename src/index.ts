@@ -1,1 +1,1 @@
-console.log("Hello from Mendix Stories SDK");
+export { StoriesClient, StoriesModel } from "./api";
