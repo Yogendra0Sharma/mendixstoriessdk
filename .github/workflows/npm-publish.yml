@@ -16,7 +16,7 @@ jobs:
         with:
           node-version: 12
       - run: npm ci
-      - run: npm build:prod
+      - run: npm run build:prod
       - run: npm test
 
   publish-npm:
