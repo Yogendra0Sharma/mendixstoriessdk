@@ -16,7 +16,7 @@ There are several ways to install the library. The most common one is via npm re
 
 ```bash
 # install the latest stable library from the npm registry
-npm install mendixstoriessdk--save
+npm install mendixstoriessdk --save
 # install the latest alpha library from the npm registry
 npm install mendixstoriessdk@latest --save
 ```
